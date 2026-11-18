@@ -3,6 +3,7 @@ import { createActivity, createTeam, getLeaderboard, listActivities, listTeams, 
 
 export const apiRouter = Router();
 
+// Is step 3 already done?
 apiRouter.get('/activities', async (_request, response, next) => {
   try { response.json({ activities: await listActivities() }); } catch (error) { next(error); }
 });
